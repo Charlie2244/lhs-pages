@@ -1,6 +1,6 @@
 {
   "name": "lhs-pages",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "static web app workflow",
   "bin": "bin/lhs-pages.js",
   "dependencies": {

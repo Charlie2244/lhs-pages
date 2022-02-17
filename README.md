@@ -1,13 +1,6 @@
 # lhs-pages
 
-[![NPM Downloads][downloads-image]][downloads-url]
-[![NPM Version][version-image]][version-url]
-[![License][license-image]][license-url]
-[![Dependency Status][dependency-image]][dependency-url]
-[![devDependency Status][devdependency-image]][devdependency-url]
-[![Code Style][style-image]][style-url]
-
-> static web app workflow
+一款可以将 普通的 html 项目 自动化打包的工具
 
 ## Installation
 
@@ -18,59 +11,27 @@ $ yarn add lhs-pages
 $ npm install lhs-pages
 ```
 
-## Usage
+## useage
 
-<!-- TODO: Introduction of API use -->
+安装改工具之后, package.json 中配置可以直接使用命令,
 
-```javascript
-const zcePages = require("lhs-pages");
-const result = zcePages("zce");
-// result => 'zce@zce.me'
+```js
+ "scripts": {
+    "clean": "lhs-pages clean",
+    "develop": "lhs-pages develop",
+    "build": "lhs-pages build"
+  }
 ```
 
-## API
+默认约定脚手架中有 **config.gulp.js** 文件, 文件中 有 基本配置架构, data 配置.
+然后就可以通过命令使用该工具了.
 
-<!-- TODO: Introduction of API -->
+## 备注
 
-### zcePages(name[, options])
+#### 脚手架结构
 
-#### name
+![脚手架结构](shotcart.png)
 
-- Type: `string`
-- Details: name string
+#### config.gulp.js 结构
 
-#### options
-
-##### host
-
-- Type: `string`
-- Details: host string
-- Default: `'zce.me'`
-
-## Contributing
-
-1. **Fork** it on GitHub!
-2. **Clone** the fork to your own machine.
-3. **Checkout** your feature branch: `git checkout -b my-awesome-feature`
-4. **Commit** your changes to your own branch: `git commit -am 'Add some feature'`
-5. **Push** your work back up to your fork: `git push -u origin my-awesome-feature`
-6. Submit a **Pull Request** so that we can review your changes.
-
-> **NOTE**: Be sure to merge the latest from "upstream" before making a pull request!
-
-## License
-
-[MIT](LICENSE) &copy; zce <w@zce.me> (https://zce.me)
-
-[downloads-image]: https://img.shields.io/npm/dm/lhs-pages.svg
-[downloads-url]: https://npmjs.org/package/lhs-pages
-[version-image]: https://img.shields.io/npm/v/lhs-pages.svg
-[version-url]: https://npmjs.org/package/lhs-pages
-[license-image]: https://img.shields.io/github/license/zce/lhs-pages.svg
-[license-url]: https://github.com/zce/lhs-pages/blob/master/LICENSE
-[dependency-image]: https://img.shields.io/david/zce/lhs-pages.svg
-[dependency-url]: https://david-dm.org/zce/lhs-pages
-[devdependency-image]: https://img.shields.io/david/dev/zce/lhs-pages.svg
-[devdependency-url]: https://david-dm.org/zce/lhs-pages?type=dev
-[style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
-[style-url]: https://standardjs.com
+![config.gulp.js结构](data结构.png)
